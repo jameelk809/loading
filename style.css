@@ -1,0 +1,83 @@
+@-webkit-keyframes newton-gooey-extra-dot-animation {
+    50% {
+        transform: translateX(0.8571428571em);
+    }
+}
+
+@keyframes newton-gooey-extra-dot-animation {
+    50% {
+        transform: translateX(0.8571428571em);
+    }
+}
+
+@-webkit-keyframes newton-gooey-main-dot-animation {
+    50% {
+        transform: translateX(-0.2857142857em);
+    }
+}
+
+@keyframes newton-gooey-main-dot-animation {
+    50% {
+        transform: translateX(-0.2857142857em);
+    }
+}
+
+.gooey-filter {
+    position: absolute;
+    left: -9000px;
+    top: -9000px;
+}
+
+.tmp-parent {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #77b613;
+    font-size: 150px;
+}
+
+.preloader-newton-gooey {
+    width: 1em;
+    width: 1em;
+}
+
+.preloader-newton-gooey .preloader-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    filter: url("#goo");
+}
+
+.preloader-newton-gooey .dot {
+    background-color: #1677ff;
+    display: block;
+    width: 0.1428571429em;
+    border-radius: 100%;
+    -webkit-animation: none 2.8s infinite;
+    animation: none 2.8s infinite;
+    transform: translateX(0);
+}
+
+.preloader-newton-gooey .dot:not(:first-of-type) {
+    margin-left: 0.1428571429em;
+}
+
+.preloader-newton-gooey .dot::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.preloader-newton-gooey .extra-dot {
+    -webkit-animation-name: newton-gooey-extra-dot-animation;
+    animation-name: newton-gooey-extra-dot-animation;
+}
+
+.preloader-newton-gooey .main-dot {
+    -webkit-animation-name: newton-gooey-main-dot-animation;
+    animation-name: newton-gooey-main-dot-animation;
+}
